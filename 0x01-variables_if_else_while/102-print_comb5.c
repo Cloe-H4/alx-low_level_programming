@@ -20,7 +20,8 @@ int main(void)
 			{
 				for (d = 0; d <= 9; d++)
 				{
-					if ((a + b) < (c + d))
+					if ((((a + b) < (c + d)) || (((a + b) > (c + d)) &&
+					((c + d) == c))) && (((a != 0) + b) != a))
 					{
 						putchar(a + '0');
 						putchar(b + '0');
