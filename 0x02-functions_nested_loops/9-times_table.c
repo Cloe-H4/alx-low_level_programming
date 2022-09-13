@@ -3,7 +3,23 @@
 /**
  * times_table - Prints the timestables from 0 to 9
  *
+ * Description: Creates a time table from 0 to 9
  * Return: 0 as success
+ */
+void nine(int c);
+/**
+ * nine - multiply second number
+ * @c: Inputted num
+ *
+ * Description: Handles the displaying of all 9 row
+ * Return: void
+ */
+void dub(int c);
+/**
+ * dub - Prints two numbers
+ * @c: Inputted num
+ *
+ * Return: void
  */
 void times_table(void)
 {
@@ -14,12 +30,24 @@ void times_table(void)
 		for (b = 0; b <= 9; b++)
 		{
 			c = a * b;
-			if (c > 9)
+			if (b == 9)
 			{
-				_putchar((c / 10) + '0');
-				_putchar((c % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
+				nine(c);
+			}
+			else if (((b + 1) * a) > 9)
+			{
+				if (c > 9)
+				{
+					dub(c);
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(c + '0');
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			else
 			{
@@ -31,4 +59,18 @@ void times_table(void)
 		}
 		_putchar('\n');
 	}
+}
+
+void nine(int c)
+{
+	if (c > 9)
+		dub(c);
+	else
+		_putchar(c + '0');
+}
+
+void dub(int c)
+{
+	_putchar((c / 10) + '0');
+	_putchar((c % 10) + '0');
 }
