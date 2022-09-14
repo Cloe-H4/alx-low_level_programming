@@ -8,27 +8,24 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int count, d;
+	long int a = 1;
+	long int b = 2;
+	int count;
+	long int d;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 
 	for (count = 2; count < 50; count++)
 	{
-		if (count < 49)
-		{
-			d = a + b;
-			printf("%d, ", d);
-			a = b;
-			b = d;
-		}
-		else if (count == 49)
-		{
-			d = a + b;
-			printf("%d", d);
-		}
+		d = a + b;
+		printf("%d", d);
+		a = b;
+		b = d;
+
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
 	return (0);
 }
