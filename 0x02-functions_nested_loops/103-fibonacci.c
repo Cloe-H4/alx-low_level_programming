@@ -12,7 +12,7 @@ int main(void)
 	long int a = 1;
 	long int b = 2;
 	long int fib;
-	unsigned long int sum = 0;
+	unsigned long int sum = 2;
 
 	while (b < 4000000)
 	{
