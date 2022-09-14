@@ -17,4 +17,5 @@ int main(void)
 			r += a;
 	}
 	printf("%d\n", r);
+	return (0);
 }
