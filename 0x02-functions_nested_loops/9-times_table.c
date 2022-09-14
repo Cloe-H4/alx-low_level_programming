@@ -6,71 +6,35 @@
  * Description: Creates a time table from 0 to 9
  * Return: 0 as success
  */
-void nine(int c);
-/**
- * nine - multiply second number
- * @c: Inputted num
- *
- * Description: Handles the displaying of all 9 row
- * Return: void
- */
-void dub(int c);
-/**
- * dub - Prints two numbers
- * @c: Inputted num
- *
- * Return: void
- */
 void times_table(void)
 {
 	int a, b, c;
 
-	for (a = 0; a <= 9; a++)
+	for (a = 0; a < 10; a++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (b = 0; b < 10; b++)
 		{
 			c = a * b;
-			if (b == 9)
+			if (b != 0)
 			{
-				nine(c);
-			}
-			else if (((b + 1) * a) > 9)
-			{
-				if (c > 9)
-				{
-					dub(c);
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar(c + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
-			else
-			{
-				_putchar(c + '0');
 				_putchar(',');
 				_putchar(' ');
+			}
+			if (c > 9)
+			{
+				_putchar((c / 10) + '0');
+				_putchar((c % 10) + '0');
+			}
+			else if ((c <= 9) && (b != 0))
+			{
 				_putchar(' ');
+				_putchar(c + '0');
+			}
+			else if (b == 0)
+			{
+				_putchar(c + '0');
 			}
 		}
 		_putchar('\n');
 	}
-}
-
-void nine(int c)
-{
-	if (c > 9)
-		dub(c);
-	else
-		_putchar(c + '0');
-}
-
-void dub(int c)
-{
-	_putchar((c / 10) + '0');
-	_putchar((c % 10) + '0');
 }
