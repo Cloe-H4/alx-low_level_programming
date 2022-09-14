@@ -28,7 +28,7 @@ void print_times_table(int n)
 			else if (z > 99)
 				printf(", %d", z);
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 	}
 }
