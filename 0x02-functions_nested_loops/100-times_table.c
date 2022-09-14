@@ -12,6 +12,8 @@ void print_times_table(int n)
 {
 	int a, w, z;
 
+	if ((n < 16) && (n >= 0))
+	{
 	for (w = 0; w <= n; w++)
 	{
 		for (a = 0; a <= n; a++)
@@ -27,5 +29,6 @@ void print_times_table(int n)
 				printf(", %d", z);
 		}
 		_putchar('\n');
+	}
 	}
 }
