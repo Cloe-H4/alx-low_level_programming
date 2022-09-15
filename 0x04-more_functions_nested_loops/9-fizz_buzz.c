@@ -12,22 +12,19 @@
 int main(void)
 {
 	int num;
-	char fizz[] = "Fizz";
-	char buzz[] = "Buzz";
 
-	for (num = 1; num <= 100; num++)
+	for (num = 1; num < 100; num++)
 	{
 		if (num % 15 == 0)
-			printf("%s%s", fizz, buzz);
+			printf("FizzBuzz ");
 		else if (num % 3 == 0)
-			printf("%s", fizz);
+			printf("Fizz ");
 		else if (num % 5 == 0)
-			printf("%s", buzz);
+			printf("Buzz ");
 		else
-			printf("%d", num);
+			printf("%d ", num);
 
-		printf(" ");
 	}
-	printf("\n");
+	printf("Buzz\n");
 	return (0);
 }
