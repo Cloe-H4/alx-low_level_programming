@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _isdigit - Checks if c is a number between 0-9
@@ -7,10 +7,15 @@
  * Return: 1 if c is number and 0 otherwise
  */
 
-int _isdigit(int c)
+int main(void)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
+	int c = 5;
+	if (c >= 0 && c <= 9)
+	{
+		putchar('1');
+		putchar('\n');
+	}
 	else
 		return (0);
+	return (2);
 }
