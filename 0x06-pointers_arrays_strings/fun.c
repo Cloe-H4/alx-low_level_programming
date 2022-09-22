@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	char fun[5] = "main ";
-	char pet[5] = "main.";
+	char fun[5] = "eace";
+	char pet[5] = "eazn";
 	int i;
 
 	i = strcmp(fun, pet);
