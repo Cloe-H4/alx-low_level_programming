@@ -23,7 +23,7 @@ while (*(s + c) != '\0')
 			break;
 		}
 	}
-	count++;
+	c++;
 }
 return (s);
 }
