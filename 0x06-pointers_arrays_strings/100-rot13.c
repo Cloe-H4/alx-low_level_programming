@@ -7,7 +7,7 @@
  * Return: pointer to output string
  */
 
-char *rot13(char *str)
+char *rot13(char *s)
 {
 int c = 0, i;
 char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
