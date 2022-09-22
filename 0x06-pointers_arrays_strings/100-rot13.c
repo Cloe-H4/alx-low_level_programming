@@ -2,7 +2,7 @@
 
 /**
  * rot13 - codes string in rot13.
- * @str: inputted string
+ * @s: inputted string
  *
  * Return: pointer to output string
  */
