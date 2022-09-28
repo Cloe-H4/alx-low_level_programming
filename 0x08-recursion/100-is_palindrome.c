@@ -15,7 +15,9 @@ int is_palindrome(char *s);
 
 int check(char *s, int ck)
 {
-	if (ck == strlen(s) / 2)
+	int half = strlen(s) / 2;
+
+	if (ck == half)
 		return (1);
 	else if (s[ck] != s[strlen(s) - ck - 1])
 		return (0);
