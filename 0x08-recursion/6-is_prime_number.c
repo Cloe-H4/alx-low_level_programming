@@ -17,8 +17,7 @@ int prime(int n, int z)
 		return (1);
 	else if (n % z == 0)
 		return (0);
-	else if (n % z != 0)
-		return (prime(n, z + 1));
+	return (prime(n, z + 1));
 }
 
 /**
