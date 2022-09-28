@@ -1,0 +1,1 @@
+Recursion is when a function calls itself. It is better than iteration, in that it uses lesser lines and makes the code appear more elegant. It also has a disadvantage, that is it requires more stack space.
