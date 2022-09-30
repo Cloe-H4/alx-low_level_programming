@@ -1,0 +1,1 @@
+The main function is not always 'int main()', sometimes it takes in arguments too which are; argc and argv. argc is an int that shows the count of inputted string while argv is an array of pointers to inputted strings from the terminal
