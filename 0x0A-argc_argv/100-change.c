@@ -1,44 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int change(int mn);
 /**
- * change - the core change calculator
- * @mn: inputted value
- * Return: number of change
+ * main - Prints the minimum number of coins to
+ *        make change for an amount of money.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: If the number of arguments is not exactly one - 1.
+ *         Otherwise - 0.
  */
-
-int change(int mn)
+int main(int argc, char *argv[])
 {
-	int num = 1;
-
-	if (mn <= 0)
-		return (0);
-
-	if (mn >= 25)
-		num += change(mn - 25);
-	else if (mn >= 10)
-		num += change(mn - 10);
-	else if (mn >= 5)
-		num += change(mn - 5);
-	else if (mn >= 2)
-		num += change(mn - 2);
-	else if (mn >= 1)
-		num += change(mn - 1);
-
-	return (num);
-}
-
-/**
- * main - calculates number of change for inputted amount
- * @argc: number of inputted arguments
- * @argv: array of inputted arguments
- * Return: 0 for success and 1 for error
- */
-
-int main(int argc, char **argv)
-{
-	int numc;
+	int cents, coins = 0;
 
 	if (argc != 2)
 	{
@@ -46,7 +20,35 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	numc = change(atoi(argv[1]));
-	printf("%d\n", numc);
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
+	{
+		coins++;
+		if ((cents - 25) >= 0)
+		{
+			cents -= 25;
+			continue;
+		}
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
+	}
+
+	printf("%d\n", coins);
+
 	return (0);
 }
