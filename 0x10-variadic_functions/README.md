@@ -1,0 +1,1 @@
+Variadic functions are functions which accept unlimited number of arguments. By using the macros in the stdarg.h file like va_list, va_end and va_arg, it is possible to use and control the undefined number of arguments.
