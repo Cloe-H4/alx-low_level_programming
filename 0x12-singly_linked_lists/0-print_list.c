@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
  * print_list - prints the node elements in a single linked list.
@@ -10,18 +11,16 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int count = 0;
-	list_t *dup_h;
+	unsigned int count;
 
-	dup_h = h;
-	while (dup_h != NULL)
+	while (h != NULL)
 	{
-		if (dup_h->str == NULL)
-			printf("[0] (nil)");
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
 		else
-			printf("[%u] %s", dup_h->len, dup_h->str);
+			printf("[%u] %s\n", h->len, h->str);
 		count++;
-		dup_h = dup_h->next;
+		h = h->next;
 	}
 
 	return (count);
